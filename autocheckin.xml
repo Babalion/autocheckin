@@ -6,7 +6,7 @@
     <authorUrl>https://github.com/Babalion</authorUrl>
     <copyright>© 2021 Babalion - github.com/Babalion. All rights reserved.</copyright>
     <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 
     <scriptfile>install/install.php</scriptfile>
     <description>PLG_SYSTEM_AUTOCHECKIN_MANIFEST_DESCRIPTION</description>
