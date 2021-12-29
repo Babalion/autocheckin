@@ -43,35 +43,35 @@
                     <option value="48">48 hours</option>
                 </field>
 
-                <field name="checkin_articles" type="radio" default="1" layout="joomla.form.field.radio.switcher"
+                <field name="checkin_articles" type="radio" default="0" layout="joomla.form.field.radio.switcher"
                        filter="integer" label="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_ARTICLES"
                        description="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_ARTICLES_DESC">
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
 
-                <field name="checkin_categories" type="radio" default="1" layout="joomla.form.field.radio.switcher"
+                <field name="checkin_categories" type="radio" default="0" layout="joomla.form.field.radio.switcher"
                        filter="integer" label="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_CATEGORIES"
                        description="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_CATEGORIES_DESC">
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
 
-                <field name="checkin_menus" type="radio" default="1" layout="joomla.form.field.radio.switcher"
+                <field name="checkin_menus" type="radio" default="0" layout="joomla.form.field.radio.switcher"
                        filter="integer" label="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_MENUS"
                        description="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_MENUS_DESC">
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
 
-                <field name="checkin_modules" type="radio" default="1" layout="joomla.form.field.radio.switcher"
+                <field name="checkin_modules" type="radio" default="0" layout="joomla.form.field.radio.switcher"
                        filter="integer" label="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_MODULES"
                        description="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_MODULES_DESC">
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
 
-                <field name="checkin_plugins" type="radio" default="1" layout="joomla.form.field.radio.switcher"
+                <field name="checkin_plugins" type="radio" default="0" layout="joomla.form.field.radio.switcher"
                        filter="integer" label="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_PLUGINS"
                        description="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_PLUGINS_DESC">
                     <option value="0">JNO</option>
