@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.10" group="system" method="upgrade">
+    <name>PLG_SYSTEM_AUTOCHECKIN</name>
+    <creationDate>2021-12-29</creationDate>
+    <author>Babalion</author>
+    <authorUrl>https://github.com/Babalion</authorUrl>
+    <copyright>© 2021 Babalion - github.com/Babalion. All rights reserved.</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <version>0.0.1</version>
+
+    <scriptfile>install/install.php</scriptfile>
+    <description>PLG_SYSTEM_AUTOCHECKIN_MANIFEST_DESCRIPTION</description>
+
+    <updateservers>
+        <server type="extension" name="Babalions Extensions Updates">https://raw.githubusercontent.com/babalion/autocheckin/master/update.xml</server>
+    </updateservers>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_autocheckin.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_autocheckin.sys.ini</language>
+        <language tag="de-DE">de-DE/de-DE.plg_system_autocheckin.ini</language>
+        <language tag="de-DE">de-DE/de-DE.plg_system_autocheckin.sys.ini</language>
+    </languages>
+
+    <files>
+        <filename plugin="autocheckin">autocheckin.php</filename>
+    </files>
+
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="max_co_time" type="list" default="24"
+                       label="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_MAX_CO_TIME"
+                       description="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_MAX_CO_TIME_DESC">
+                    <option value="1">1 hour</option>
+                    <option value="2">2 hours</option>
+                    <option value="3">3 hours</option>
+                    <option value="6">6 hours</option>
+                    <option value="12">12 hours</option>
+                    <option value="24">24 hours</option>
+                    <option value="36">36 hours</option>
+                    <option value="48">48 hours</option>
+                </field>
+
+                <field name="checkin_articles" type="radio" default="1" layout="joomla.form.field.radio.switcher"
+                       filter="integer" label="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_ARTICLES"
+                       description="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_ARTICLES_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="checkin_categories" type="radio" default="1" layout="joomla.form.field.radio.switcher"
+                       filter="integer" label="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_CATEGORIES"
+                       description="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_CATEGORIES_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="checkin_menus" type="radio" default="1" layout="joomla.form.field.radio.switcher"
+                       filter="integer" label="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_MENUS"
+                       description="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_MENUS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="checkin_modules" type="radio" default="1" layout="joomla.form.field.radio.switcher"
+                       filter="integer" label="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_MODULES"
+                       description="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_MODULES_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="checkin_plugins" type="radio" default="1" layout="joomla.form.field.radio.switcher"
+                       filter="integer" label="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_PLUGINS"
+                       description="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_PLUGINS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>
