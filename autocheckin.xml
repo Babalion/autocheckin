@@ -8,11 +8,14 @@
     <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
     <version>0.1.1</version>
 
+    <description>PLG_SYSTEM_AUTOCHECKIN_MANIFEST_DESCRIPTION</description>
+    <help url="PLG_SYSTEM_AUTOCHECKIN_HELP_URL"/>
     <scriptfile>install/install.php</scriptfile>
-    <description>Automatically checks in elements locked by authors after a defined time. This prevents elements from remaining checked out (aka locked) if they are accidentally not saved.</description>
 
     <updateservers>
-        <server type="extension" name="Babalions Extensions Updates">https://raw.githubusercontent.com/babalion/autocheckin/master/update.xml</server>
+        <server type="extension" name="Babalions Extensions Updates">
+            https://raw.githubusercontent.com/babalion/autocheckin/master/update.xml
+        </server>
     </updateservers>
 
     <languages folder="language">
@@ -33,14 +36,14 @@
                 <field name="max_co_time" type="list" default="24"
                        label="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_MAX_CO_TIME"
                        description="PLG_SYSTEM_AUTOCHECKIN_CFG_CHECKIN_MAX_CO_TIME_DESC">
-                    <option value="1">1 hour</option>
-                    <option value="2">2 hours</option>
-                    <option value="3">3 hours</option>
-                    <option value="6">6 hours</option>
-                    <option value="12">12 hours</option>
-                    <option value="24">24 hours</option>
-                    <option value="36">36 hours</option>
-                    <option value="48">48 hours</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                    <option value="36">36</option>
+                    <option value="48">48</option>
                 </field>
 
                 <field name="checkin_articles" type="radio" default="0" layout="joomla.form.field.radio.switcher"
