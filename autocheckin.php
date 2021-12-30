@@ -31,7 +31,7 @@ class PlgSystemAutocheckin extends CMSPlugin
 	{
 		parent::__construct($subject, $config);
 		$this->app           = Factory::getApplication();
-		$this->max_co_time_s = $this->params->get('max_co_time') * 20;
+		$this->max_co_time_s = $this->params->get('max_co_time') * 3600;
 
 		// read in element types
 		$checkin_articles   = $this->params->get('checkin_articles');
