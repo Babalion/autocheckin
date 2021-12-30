@@ -1,8 +1,9 @@
 <?php
 /**
- * @version        $Id: autocheckin.php 2011-07-30 eXtro-media.de $
- * @copyright      Copyright (C) 2011 eXtro-media.de All rights reserved.
- * @license        GNU General Public License version 2 or later
+ * @author     Babalion https://github.com/Babalion
+ * @copyright  © 2021 Babalion https://github.com/Babalion All rights reserved.
+ * @license    GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+ * @link       https://github.com/Babalion/autocheckin
  */
 
 // no direct access
@@ -24,7 +25,7 @@ class PlgSystemAutocheckin extends CMSPlugin
 
 	private $app;
 	private $max_co_time_s;
-	private $active_element_types;
+	private $element_types;
 
 	public function __construct(&$subject, $config = array())
 	{
@@ -41,7 +42,7 @@ class PlgSystemAutocheckin extends CMSPlugin
 
 		// load the element-types
 		// third entry is the database-table-name of this elements
-		$this->active_element_types = array(
+		$this->element_types = array(
 			array('articles', $checkin_articles, 'id', '#__content'),
 			array('categories', $checkin_categories, 'id', '#__categories'),
 			array('menus', $checkin_menus, 'id', '#__menu'),
@@ -62,13 +63,13 @@ class PlgSystemAutocheckin extends CMSPlugin
 		$time_now = Factory::getDate('now');
 		$db       = Factory::getDBO();
 
-		foreach ($this->active_element_types as $a_el_type)
+		foreach ($this->element_types as $el_type)
 		{
-			// first index of $a_el_type[1]==1 if this element-type is toggled active in settings
-			if ($a_el_type[1] != 0)
+			// first index of $el_type[1]==1 if this element-type is toggled active in settings
+			if ($el_type[1] != 0)
 			{
 				// select all checked out elements
-				$query = 'SELECT ' . $a_el_type[2] . ',checked_out,checked_out_time FROM ' . $a_el_type[3] . ' WHERE checked_out > 0';
+				$query = 'SELECT ' . $el_type[2] . ',checked_out,checked_out_time FROM ' . $el_type[3] . ' WHERE checked_out > 0';
 				$db->setQuery($query);
 				$checked_out_elements = $db->loadObjectList();
 
@@ -78,7 +79,7 @@ class PlgSystemAutocheckin extends CMSPlugin
 					$time_checked_out = strtotime($time_now) - strtotime($a->checked_out_time);
 					if ($time_checked_out >= $this->max_co_time_s)
 					{
-						$query = 'UPDATE  ' . $a_el_type[3] . ' SET checked_out = 0 WHERE ' . $a_el_type[2] . ' = ' . $a->{$a_el_type[2]};
+						$query = 'UPDATE  ' . $el_type[3] . ' SET checked_out = 0 WHERE ' . $el_type[2] . ' = ' . $a->{$el_type[2]};
 						$db->setQuery($query);
 						$db->execute();
 					}
