@@ -9,7 +9,7 @@
     <version>0.1.1</version>
 
     <scriptfile>install/install.php</scriptfile>
-    <description>PLG_SYSTEM_AUTOCHECKIN_MANIFEST_DESCRIPTION</description>
+    <description>Automatically checks in elements locked by authors after a defined time. This prevents elements from remaining checked out (aka locked) if they are accidentally not saved.</description>
 
     <updateservers>
         <server type="extension" name="Babalions Extensions Updates">https://raw.githubusercontent.com/babalion/autocheckin/master/update.xml</server>
