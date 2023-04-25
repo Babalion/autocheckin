@@ -1,4 +1,8 @@
 # Joomla Plugin Autocheckin
+***This Repo is not longer maintained and does not work on Joomla 4 any more!
+Please consider switching to an alternative i.e.
+https://extensions.joomla.org/extension/scheduled-check-in-items/***
+
 If you have multiple users working on your Joomla! site, you know the problem:
 An item is checked out by another user, that user is not online anymore,
 because he has closed his browser window instead of logging out, his session has expired or the browser crashed.
